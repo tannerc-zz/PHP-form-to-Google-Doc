@@ -12,7 +12,7 @@
 		if(isValidEmail($daemail)) {
 		
 			// Now submit the form via php CURL function.
-			$url = 'https://docs.google.com/spreadsheet/formResponse?formkey=YOUR-FORM-KEY';
+			$url = 'https://docs.google.com/forms/d/' . YOUR-FORM-KEY . '/formResponse';
 			$body = 'entry.0.single=' . $daemail;
 			$c = curl_init ($url);
 			curl_setopt ($c, CURLOPT_POST, true);
